@@ -7,7 +7,7 @@ import patonodejs from "../../img/patonodejs.png";
 import patogeek from "../../img/patpgeek.png";
 
 const Navbar = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container">
             <a className="navbar-brand" href="#">Start Bootstrap</a>
             <button
@@ -42,42 +42,42 @@ const Navbar = () => (
 );
 
 const Header = () => (
-    <header className="bg-light py-5">
-        <div className="container px-5">
-            <div className="text-center">
-                <h1 className="display-4 fw-bolder">A Warm Welcome!</h1>
-                <p className="lead fw-normal text-muted mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsa, eligendi, in quo sunt
-                    possimus non incidunt dolor vero aliquid similique quaerat nam nobis illo aspernatur vitae fugit
-                    numquam repellat.
-                </p>
-                <a className="btn btn-primary btn-lg" href="#!">
-                    Call to action!
-                </a>
-            </div>
-        </div>
-    </header>
+    <header className="bg-light py-5 mt-4">
+    	<div className="container px-5">
+    	    <div className="text-start bg-secondary bg-opacity-10 p-3">
+    	        <h1 className="display-4 ">A Warm Welcome!</h1>
+    	        <p className="lead fw-normal text-muted mb-4">
+    	            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsa, eligendi, in quo sunt
+    	            possimus non incidunt dolor vero aliquid similique quaerat nam nobis illo aspernatur vitae fugit
+    	            numquam repellat.
+    	        </p>
+    	        <a className="btn btn-primary btn-lg" href="#!">
+    	            Call to action!
+    	        </a>
+    		</div>
+    	</div>
+	</header>
 );
 
 const Card = ({ title, text, btnText, image }) => (
     <div className="col mb-5">
-        <div className="card h-100">
-            <img
-                className="card-img-top"
-                src={image}
-                alt={title}
-            />
-            <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{text}</p>
-            </div>
-            <div className="card-footer bg-transparent border-top-0">
-                <a href="#!" className="btn btn-primary">
-                    {btnText}
-                </a>
-            </div>
-        </div>
-    </div>
+    	<div className="card h-100">
+    	    <img
+    	        className="card-img-top"
+    	        src={image}
+    	        alt={title}
+    	    />
+    	    <div className="card-body text-center">
+    	        <h5 className="card-title">{title}</h5>
+    	        <p className="card-text">{text}</p>
+    	    </div>
+    	    <div className="card-footer bg-transparent border-top-0 text-center">
+    	        <a href="#!" className="btn btn-primary">
+    	            {btnText}
+    	        </a>
+    	    </div>
+    	</div>
+	</div>
 );
 
 const CardGrid = () => {
